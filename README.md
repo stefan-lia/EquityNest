@@ -36,11 +36,23 @@ The domain remains independent. Technical concerns depend inward on the business
 ## Getting started
 
 ```powershell
-dotnet build EquityNest.sln
-dotnet test EquityNest.sln
+dotnet restore EquityNest.sln
+dotnet build EquityNest.sln --configuration Release --no-restore
+dotnet test EquityNest.sln --configuration Release --no-build
 dotnet run --project src/EquityNest.Web
 ```
 
+For prerequisites, container execution, and the demo-data policy, see [local development](docs/local-development.md).
+
+## Architecture decisions
+
+Initial decisions are recorded in [architecture decision records](docs/adr):
+
+- [ADR 0001 — Modular monolith](docs/adr/0001-modular-monolith.md)
+- [ADR 0002 — Safe fictional demo data](docs/adr/0002-safe-fictional-demo-data.md)
+
+The planned delivery sequence is maintained in [the implementation roadmap](docs/implementation-phases.md).
+
 ## Current status
 
-This repository currently contains the solution scaffold and architectural boundaries. Features will be implemented incrementally, beginning with authentication and the household-finance MVP.
+Phase 0 is complete: the solution has documented boundaries, local development guidance, quality rules, container execution, CI, ADRs, and a fictional demo-data specification. The next feature phase is authentication and the household-finance MVP.

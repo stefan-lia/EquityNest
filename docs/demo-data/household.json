@@ -1,0 +1,12 @@
+{
+  "householdName": "The Finch Household",
+  "members": [
+    { "displayName": "Alex Finch", "role": "Owner" },
+    { "displayName": "Sam Finch", "role": "Member" }
+  ],
+  "accounts": [
+    { "name": "Everyday Account", "type": "Current", "currency": "EUR", "openingBalance": 3240.75 },
+    { "name": "Rainy Day", "type": "Savings", "currency": "EUR", "openingBalance": 8600.00 }
+  ],
+  "note": "All names, amounts, and accounts are fictional and exist solely for development and demonstration."
+}
